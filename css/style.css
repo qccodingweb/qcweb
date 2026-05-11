@@ -85,7 +85,7 @@ h4 { font-size: 1.05rem; font-weight: 700; }
 
 p {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.78);
   max-width: 60ch;
 }
 
@@ -442,7 +442,7 @@ section {
 }
 
 .hero p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 1.15rem;
   margin-bottom: 2.5rem;
   max-width: 55ch;
@@ -508,7 +508,7 @@ section {
 }
 
 .btn-outline:hover {
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.75);
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-3px);
 }
@@ -646,7 +646,7 @@ section {
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .card-link {
@@ -684,7 +684,7 @@ section {
 }
 
 .card-dark h3 { color: var(--white); }
-.card-dark p { color: rgba(255, 255, 255, 0.55); }
+.card-dark p { color: rgba(255, 255, 255, 0.78); }
 
 /* ══════════════════════════════════
    SECTIONS
@@ -703,7 +703,7 @@ section {
 }
 
 .section-dark p {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .section-tinted {
@@ -1014,7 +1014,7 @@ section {
 
 .tier-desc {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -1028,7 +1028,7 @@ section {
 
 .tier-features li {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
@@ -1238,7 +1238,7 @@ section {
 .client-type:hover::before { height: 100%; }
 
 .client-type h4 { color: var(--white); margin-bottom: 0.5rem; }
-.client-type p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.5); }
+.client-type p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.75); }
 
 /* ══════════════════════════════════
    CONTACT
@@ -1316,7 +1316,7 @@ section {
   margin-bottom: 0.5rem;
 }
 
-.contact-item p { font-size: 0.95rem; color: rgba(255, 255, 255, 0.5); }
+.contact-item p { font-size: 0.95rem; color: rgba(255, 255, 255, 0.75); }
 
 .contact-item a {
   color: var(--emerald);
@@ -1354,6 +1354,22 @@ section {
   background: linear-gradient(135deg, var(--emerald), #00F5A0);
   color: var(--teal-dark);
   border: none;
+}
+
+.enterprise-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--emerald), #00F5A0);
+  color: var(--teal-dark);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.35rem 1.2rem;
+  border-radius: 0 0 10px 10px;
+  z-index: 2;
 }
 
 /* ══════════════════════════════════
