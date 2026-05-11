@@ -1,285 +1,280 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="meta.about.title">About · Quadra Code</title>
-  <meta name="description" content="Dubai-based technology infrastructure company. We deliver complete business solutions with fixed pricing and defined timelines. IFZA, Dubai Silicon Oasis." data-i18n="meta.about.desc">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add('js')</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="meta.about.title">About · Quadra Code</title>
+<meta name="description" content="Dubai-based technology infrastructure company. We deliver complete business solutions with fixed pricing and defined timelines. IFZA, Dubai Silicon Oasis." data-i18n="meta.about.desc">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: { 950: '#040f0f', 900: '#061d1d', 850: '#082525', 800: '#0a2e2e', 700: '#0e3a37' },
+        mint: { 300: '#6df5c8', 400: '#3df0b5', 500: '#14e89c', 600: '#0bc787', 700: '#0a9a6b' },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+    },
+  },
+}
+</script>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
 
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="preloader-inner">
-      <div class="preloader-logo">QUADRA CODE<span class="dot">.</span></div>
-      <div class="preloader-bar"><div class="preloader-progress"></div></div>
+<!-- Custom cursor -->
+<div class="cursor"></div>
+<div class="cursor-dot"></div>
+
+<!-- Background -->
+<div class="gradient-mesh" id="gradient-mesh"></div>
+<div class="noise"></div>
+<div class="mobile-overlay"></div>
+
+<!-- Nav -->
+<nav class="fixed-nav" id="nav">
+  <a href="index.html" class="nav-logo magnetic" data-cursor="hover">QUADRA <span class="text-mint-500">CODE</span></a>
+  <div class="nav-links-desktop hidden md:flex items-center gap-8">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="about.html" class="active" data-i18n="nav.about">About</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-toggle magnetic" data-cursor="hover">EN</button>
+    <a href="contact.html" class="cta-button magnetic nav-cta-desktop" data-cursor="hover" style="padding: 10px 20px; font-size: 11px;">
+      <span data-i18n="nav.contact">Contact</span><span>→</span>
+    </a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">QUADRA CODE<span class="dot">.</span></div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+</div>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <canvas class="page-hero-canvas" aria-hidden="true"></canvas>
+  <div class="page-hero-content">
+    <span class="label-mint" data-i18n="about.label">Who We Are</span>
+    <h1>
+      <span data-i18n="about.h1.1">Technology company. Results-driven.</span><br>
+      <span class="text-mint-500" data-i18n="about.h1.2">Dubai-based.</span>
+    </h1>
+    <p data-i18n="about.p">Quadra Code is a technology infrastructure company registered in Dubai Silicon Oasis. We deliver complete business solutions: from strategy and technology to operations and market launch. Every project is fixed-price, time-bound, and measured by outcomes.</p>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+    <span>BUILD</span><span class="dot">·</span>
+    <span>OPERATE</span><span class="dot">·</span>
+    <span>FIX</span><span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ============ THREE LAYERS OF IDENTITY ============ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-mint" data-i18n="identity.label">Three Layers of Identity</span>
+      <h2 data-i18n="identity.h2">How we operate.</h2>
+      <p data-i18n="identity.p">Our company operates on three levels. Each defines a different dimension of what we do and how we deliver value to clients.</p>
+    </div>
+    <div class="identity-layers">
+      <div class="layer reveal reveal-delay-1">
+        <div class="layer-num">01</div>
+        <div>
+          <span class="layer-subtitle" data-i18n="identity.l1.sub">What We Are for the Client</span>
+          <h3 data-i18n="identity.l1.h3">Full-stack execution partner</h3>
+          <p data-i18n="identity.l1.p">One point of contact for the entire business lifecycle. Strategy, technology, operations, brand, and launch. No need to coordinate five vendors. One team, one delivery.</p>
+        </div>
+      </div>
+      <div class="layer reveal reveal-delay-2">
+        <div class="layer-num">02</div>
+        <div>
+          <span class="layer-subtitle" data-i18n="identity.l2.sub">How We Operate in the Market</span>
+          <h3 data-i18n="identity.l2.h3">Technology-first approach</h3>
+          <p data-i18n="identity.l2.p">Every solution we build runs on our own digital infrastructure. Automated workflows, real-time dashboards, integrated data systems. This is how we deliver faster and at lower cost than traditional teams.</p>
+        </div>
+      </div>
+      <div class="layer reveal reveal-delay-3">
+        <div class="layer-num">03</div>
+        <div>
+          <span class="layer-subtitle" data-i18n="identity.l3.sub">What We Build On</span>
+          <h3 data-i18n="identity.l3.h3">Proprietary infrastructure</h3>
+          <p data-i18n="identity.l3.p">Stable, reliable, always running. Our technology layer is the foundation of every project we deliver. It handles operations around the clock so your business never stops.</p>
+        </div>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Cursor -->
-  <div class="cursor-dot" aria-hidden="true"></div>
-  <div class="cursor-ring" aria-hidden="true"></div>
-
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">QUADRA CODE<span class="dot">.</span></a>
-      <div class="nav-links">
-        <a href="index.html" data-i18n="nav.home">Home</a>
-        <a href="about.html" class="active" data-i18n="nav.about">About</a>
-        <a href="services.html" data-i18n="nav.services">Services</a>
-        <a href="contact.html" data-i18n="nav.contact">Contact</a>
-        <button class="lang-toggle">SK</button>
+<!-- ============ FOUR PILLARS ============ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-mint" data-i18n="pillars.label">Four Pillars</span>
+      <h2 data-i18n="pillars.h2">What we deliver.</h2>
+      <p data-i18n="pillars.p">We do not sell time, process, or advice. We sell operational outcomes in four categories.</p>
+    </div>
+    <div class="pillar-grid">
+      <div class="pillar reveal reveal-delay-1">
+        <div class="pillar-icon">&#10022;</div>
+        <h3 data-i18n="pillars.1.h3">We build from zero</h3>
+        <p data-i18n="pillars.1.p">From validated concept to operational business. Complete technology stack, brand, web, and market launch included.</p>
       </div>
-      <button class="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-  <div class="mobile-overlay"></div>
-
-  <!-- Hero -->
-  <section class="hero noise">
-    <div class="hero-bg">
-      <canvas class="hero-canvas" aria-hidden="true"></canvas>
-      <div class="hero-glow hero-glow-1"></div>
-      <div class="hero-glow hero-glow-2"></div>
-      <div class="hero-glow hero-glow-3"></div>
-      <div class="shape shape-hex shape-1"></div>
-      <div class="shape shape-circle shape-2"></div>
-      <div class="shape shape-diamond shape-3"></div>
-      <div class="shape shape-hex shape-4"></div>
-      <div class="shape shape-circle shape-5"></div>
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="hero-line"></div>
-    <div class="container">
-      <div class="hero-content">
-        <span class="label" data-i18n="about.label">Who We Are</span>
-        <h1><span data-i18n="about.h1.1">Technology company. Results-driven.</span><br><span class="gradient-text" data-i18n="about.h1.2">Dubai-based.</span></h1>
-        <p data-i18n="about.p">Quadra Code is a technology infrastructure company registered in Dubai Silicon Oasis. We deliver complete business solutions: from strategy and technology to operations and market launch. Every project is fixed-price, time-bound, and measured by outcomes.</p>
+      <div class="pillar reveal reveal-delay-2">
+        <div class="pillar-icon">&#8599;</div>
+        <h3 data-i18n="pillars.2.h3">We scale operations</h3>
+        <p data-i18n="pillars.2.p">Multi-market expansion without proportional team growth. Centralized control, automated operations, real-time reporting.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Marquee -->
-  <div class="marquee">
-    <div class="marquee-track">
-      <span>PLATFORM</span><span class="dot">·</span>
-      <span>INFRASTRUCTURE</span><span class="dot">·</span>
-      <span>RESULTS</span><span class="dot">·</span>
-      <span>AMBITION</span><span class="dot">·</span>
-      <span>TRUST</span><span class="dot">·</span>
-      <span>OPERATIONS</span><span class="dot">·</span>
-      <span>TECHNOLOGY</span><span class="dot">·</span>
-      <span>DUBAI</span><span class="dot">·</span>
-      <span>PLATFORM</span><span class="dot">·</span>
-      <span>INFRASTRUCTURE</span><span class="dot">·</span>
-      <span>RESULTS</span><span class="dot">·</span>
-      <span>AMBITION</span><span class="dot">·</span>
-      <span>TRUST</span><span class="dot">·</span>
-      <span>OPERATIONS</span><span class="dot">·</span>
-      <span>TECHNOLOGY</span><span class="dot">·</span>
-      <span>DUBAI</span><span class="dot">·</span>
-      <span>PLATFORM</span><span class="dot">·</span>
-      <span>INFRASTRUCTURE</span><span class="dot">·</span>
-      <span>RESULTS</span><span class="dot">·</span>
-      <span>AMBITION</span><span class="dot">·</span>
-      <span>TRUST</span><span class="dot">·</span>
-      <span>OPERATIONS</span><span class="dot">·</span>
-      <span>TECHNOLOGY</span><span class="dot">·</span>
-      <span>DUBAI</span><span class="dot">·</span>
-      <span>PLATFORM</span><span class="dot">·</span>
-      <span>INFRASTRUCTURE</span><span class="dot">·</span>
-      <span>RESULTS</span><span class="dot">·</span>
-      <span>AMBITION</span><span class="dot">·</span>
-      <span>TRUST</span><span class="dot">·</span>
-      <span>OPERATIONS</span><span class="dot">·</span>
-      <span>TECHNOLOGY</span><span class="dot">·</span>
-      <span>DUBAI</span><span class="dot">·</span>
+      <div class="pillar reveal reveal-delay-3">
+        <div class="pillar-icon">&#9670;</div>
+        <h3 data-i18n="pillars.3.h3">We fix what's broken</h3>
+        <p data-i18n="pillars.3.p">Structured diagnosis and intervention for businesses in stagnation. We identify the problems, implement fixes, and hand over a working system.</p>
+      </div>
+      <div class="pillar reveal reveal-delay-4">
+        <div class="pillar-icon">&#11042;</div>
+        <h3 data-i18n="pillars.4.h3">We build for independence</h3>
+        <p data-i18n="pillars.4.p">Every project includes documentation, training, and handover. When we leave, you have everything you need to continue on your own.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Three Layers of Identity -->
-  <section>
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label" data-i18n="identity.label">Three Layers of Identity</span>
-        <h2 data-i18n="identity.h2">How we operate.</h2>
-        <p data-i18n="identity.p">Our company operates on three levels. Each defines a different dimension of what we do and how we deliver value to clients.</p>
+<!-- ============ FOR WHOM ============ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-mint" data-i18n="clients.label">For Everyone Who Wants More</span>
+      <h2 data-i18n="clients.h2">Built for ambition.</h2>
+      <p data-i18n="clients.p">We work with clients who have a clear goal and the budget to match. Whether you are launching, scaling, or recovering, we have a product for your situation.</p>
+    </div>
+    <div class="client-grid">
+      <div class="client-type reveal reveal-delay-1">
+        <h4 data-i18n="clients.1.h4">Entrepreneur with an idea</h4>
+        <p data-i18n="clients.1.p">Has a validated concept but no team or infrastructure. We build the entire business from the ground up.</p>
       </div>
-      <div class="identity-layers">
-        <div class="layer reveal reveal-delay-1">
-          <div class="layer-num">01</div>
-          <div>
-            <span class="layer-subtitle" data-i18n="identity.l1.sub">What We Are for the Client</span>
-            <h3 data-i18n="identity.l1.h3">Full-stack execution partner</h3>
-            <p data-i18n="identity.l1.p">One point of contact for the entire business lifecycle. Strategy, technology, operations, brand, and launch. No need to coordinate five vendors. One team, one delivery.</p>
-          </div>
-        </div>
-        <div class="layer reveal reveal-delay-2">
-          <div class="layer-num">02</div>
-          <div>
-            <span class="layer-subtitle" data-i18n="identity.l2.sub">How We Operate in the Market</span>
-            <h3 data-i18n="identity.l2.h3">Technology-first approach</h3>
-            <p data-i18n="identity.l2.p">Every solution we build runs on our own digital infrastructure. Automated workflows, real-time dashboards, integrated data systems. This is how we deliver faster and at lower cost than traditional teams.</p>
-          </div>
-        </div>
-        <div class="layer reveal reveal-delay-3">
-          <div class="layer-num">03</div>
-          <div>
-            <span class="layer-subtitle" data-i18n="identity.l3.sub">What We Build On</span>
-            <h3 data-i18n="identity.l3.h3">Proprietary infrastructure</h3>
-            <p data-i18n="identity.l3.p">Stable, reliable, always running. Our technology layer is the foundation of every project we deliver. It handles operations around the clock so your business never stops.</p>
-          </div>
-        </div>
+      <div class="client-type reveal reveal-delay-2">
+        <h4 data-i18n="clients.2.h4">Existing company</h4>
+        <p data-i18n="clients.2.p">Operating but needs to grow faster, digitalize, or enter new markets. We accelerate the process.</p>
+      </div>
+      <div class="client-type reveal reveal-delay-3">
+        <h4 data-i18n="clients.3.h4">Investor</h4>
+        <p data-i18n="clients.3.p">Managing a portfolio of ventures. We execute multiple projects in parallel, on schedule.</p>
+      </div>
+      <div class="client-type reveal reveal-delay-1">
+        <h4 data-i18n="clients.4.h4">Visionary</h4>
+        <p data-i18n="clients.4.p">Sees a market opportunity others have not identified. We help bring it to market before the competition.</p>
+      </div>
+      <div class="client-type reveal reveal-delay-2">
+        <h4 data-i18n="clients.5.h4">Brand in crisis</h4>
+        <p data-i18n="clients.5.p">Losing market position, stagnating revenue, falling behind competitors. We diagnose and fix the core issues.</p>
+      </div>
+      <div class="client-type reveal reveal-delay-3">
+        <h4 data-i18n="clients.6.h4">Person at a turning point</h4>
+        <p data-i18n="clients.6.p">Ready to launch their own business. We provide the technology, strategy, and execution to make it real.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Four Pillars -->
-  <section class="section-dark noise">
-    <div class="hero-bg">
-      <div class="hero-glow hero-glow-1"></div>
-      <div class="hero-glow hero-glow-2"></div>
-      <div class="grid-overlay"></div>
+<!-- ============ THREE RULES ============ -->
+<section class="page-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="label-mint" data-i18n="about.rules.label">Three Rules. No Exceptions.</span>
+      <h2 data-i18n="about.rules.h2">Our guarantees.</h2>
     </div>
-    <div class="container" style="position:relative;z-index:2;">
-      <div class="section-header reveal">
-        <span class="label" data-i18n="pillars.label">Four Pillars</span>
-        <h2 data-i18n="pillars.h2">What we deliver.</h2>
-        <p data-i18n="pillars.p">We do not sell time, process, or advice. We sell operational outcomes in four categories.</p>
+    <div class="rules">
+      <div class="rule reveal reveal-delay-1">
+        <div class="rule-number">01</div>
+        <div>
+          <h3 data-i18n="about.rules.1.h3">We sell results, never hours.</h3>
+          <p data-i18n="about.rules.1.p">No hourly rates. No billed meetings. Every engagement is fixed-price or performance-based. You pay for what you get, not for how long it takes us.</p>
+        </div>
       </div>
-      <div class="pillar-grid">
-        <div class="pillar reveal reveal-delay-1">
-          <div class="pillar-icon">&#10022;</div>
-          <h3 data-i18n="pillars.1.h3">We build from zero</h3>
-          <p data-i18n="pillars.1.p">From validated concept to operational business. Complete technology stack, brand, web, and market launch included.</p>
+      <div class="rule reveal reveal-delay-2">
+        <div class="rule-number">02</div>
+        <div>
+          <h3 data-i18n="about.rules.2.h3">No diagnosis, no start.</h3>
+          <p data-i18n="about.rules.2.p">Genesis has Discovery. Engine has Setup Audit. Rescue has Imprint. We never build without understanding the full picture first.</p>
         </div>
-        <div class="pillar reveal reveal-delay-2">
-          <div class="pillar-icon">&#8599;</div>
-          <h3 data-i18n="pillars.2.h3">We scale operations</h3>
-          <p data-i18n="pillars.2.p">Multi-market expansion without proportional team growth. Centralized control, automated operations, real-time reporting.</p>
-        </div>
-        <div class="pillar reveal reveal-delay-3">
-          <div class="pillar-icon">&#9670;</div>
-          <h3 data-i18n="pillars.3.h3">We fix what's broken</h3>
-          <p data-i18n="pillars.3.p">Structured diagnosis and intervention for businesses in stagnation. We identify the problems, implement fixes, and hand over a working system.</p>
-        </div>
-        <div class="pillar reveal reveal-delay-4">
-          <div class="pillar-icon">&#11042;</div>
-          <h3 data-i18n="pillars.4.h3">We build for independence</h3>
-          <p data-i18n="pillars.4.p">Every project includes documentation, training, and handover. When we leave, you have everything you need to continue on your own.</p>
+      </div>
+      <div class="rule reveal reveal-delay-3">
+        <div class="rule-number">03</div>
+        <div>
+          <h3 data-i18n="about.rules.3.h3">The client can always leave.</h3>
+          <p data-i18n="about.rules.3.p">You own your data, your code, your brand. No lock-in contracts, no vendor traps. On departure, you receive full documentation and a 30-day handover.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- For Whom -->
-  <section>
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label" data-i18n="clients.label">For Everyone Who Wants More</span>
-        <h2 data-i18n="clients.h2">Built for ambition.</h2>
-        <p data-i18n="clients.p">We work with clients who have a clear goal and the budget to match. Whether you are launching, scaling, or recovering, we have a product for your situation.</p>
-      </div>
-      <div class="client-grid">
-        <div class="client-type reveal reveal-delay-1">
-          <h4 data-i18n="clients.1.h4">Entrepreneur with an idea</h4>
-          <p data-i18n="clients.1.p">Has a validated concept but no team or infrastructure. We build the entire business from the ground up.</p>
-        </div>
-        <div class="client-type reveal reveal-delay-2">
-          <h4 data-i18n="clients.2.h4">Existing company</h4>
-          <p data-i18n="clients.2.p">Operating but needs to grow faster, digitalize, or enter new markets. We accelerate the process.</p>
-        </div>
-        <div class="client-type reveal reveal-delay-3">
-          <h4 data-i18n="clients.3.h4">Investor</h4>
-          <p data-i18n="clients.3.p">Managing a portfolio of ventures. We execute multiple projects in parallel, on schedule.</p>
-        </div>
-        <div class="client-type reveal reveal-delay-1">
-          <h4 data-i18n="clients.4.h4">Visionary</h4>
-          <p data-i18n="clients.4.p">Sees a market opportunity others have not identified. We help bring it to market before the competition.</p>
-        </div>
-        <div class="client-type reveal reveal-delay-2">
-          <h4 data-i18n="clients.5.h4">Brand in crisis</h4>
-          <p data-i18n="clients.5.p">Losing market position, stagnating revenue, falling behind competitors. We diagnose and fix the core issues.</p>
-        </div>
-        <div class="client-type reveal reveal-delay-3">
-          <h4 data-i18n="clients.6.h4">Person at a turning point</h4>
-          <p data-i18n="clients.6.p">Ready to launch their own business. We provide the technology, strategy, and execution to make it real.</p>
-        </div>
-      </div>
+<!-- ============ PROMISE ============ -->
+<section class="page-section quote-section">
+  <div class="container">
+    <div class="reveal-scale">
+      <blockquote data-i18n="promise.quote">You define the goal.<br>We deliver the result.</blockquote>
+      <cite data-i18n="promise.cite">QUADRA CODE</cite>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Three Rules -->
-  <section class="section-tinted">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="label" data-i18n="rules.label">Three Rules. No Exceptions.</span>
-        <h2 data-i18n="rules.h2">Our guarantees.</h2>
-      </div>
-      <div class="rules">
-        <div class="rule reveal reveal-delay-1">
-          <div class="rule-number">01</div>
-          <div>
-            <h3 data-i18n="rules.1.h3">We sell results, never hours.</h3>
-            <p data-i18n="rules.1.p">No hourly rates. No billed meetings. Every engagement is fixed-price or performance-based. You pay for what you get, not for how long it takes us.</p>
-          </div>
-        </div>
-        <div class="rule reveal reveal-delay-2">
-          <div class="rule-number">02</div>
-          <div>
-            <h3 data-i18n="rules.2.h3">No diagnosis, no start.</h3>
-            <p data-i18n="rules.2.p">Genesis has Discovery. Engine has Setup Audit. Rescue has Imprint. We never build without understanding the full picture first.</p>
-          </div>
-        </div>
-        <div class="rule reveal reveal-delay-3">
-          <div class="rule-number">03</div>
-          <div>
-            <h3 data-i18n="rules.3.h3">The client can always leave.</h3>
-            <p data-i18n="rules.3.p">You own your data, your code, your brand. No lock-in contracts, no vendor traps. On departure, you receive full documentation and a 30-day handover.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span data-i18n="footer.copy">&copy; 2026 Quadra Code FZCO</span>
+    <span data-i18n="footer.tagline">Designed in Dubai &middot; Built worldwide</span>
+    <span data-i18n="footer.version">V3</span>
+  </div>
+</footer>
 
-  <!-- Promise -->
-  <section class="section-dark noise quote-section">
-    <div class="hero-bg">
-      <div class="hero-glow hero-glow-1"></div>
-      <div class="hero-glow hero-glow-3"></div>
-      <div class="grid-overlay"></div>
-    </div>
-    <div class="container" style="position:relative;z-index:2;">
-      <div class="reveal-scale">
-        <blockquote data-i18n="promise.quote">You define the goal.<br>We deliver the result.</blockquote>
-        <cite data-i18n="promise.cite">QUADRA CODE</cite>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p data-i18n="footer.copy">&copy; 2026 Quadra Code FZCO. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-        <a href="#" data-i18n="footer.terms">Terms of Service</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-  <script src="js/particles.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/pages.js"></script>
 </body>
 </html>
