@@ -38,9 +38,11 @@ hidden (was 7/21). services.html fresh load at `#engine` → 0/8 (was 3/8). `#re
 only the below-the-fold closing quote hidden, which correctly reveals on scroll. Slow
 scroll 0 hidden everywhere. 0 console errors. Mobile (390px) unaffected.
 
-### 🔄 P3a — SRI hashes — IN PROGRESS (not yet applied)
-Add `integrity` + `crossorigin="anonymous"` to the 3 classic CDN `<script>` tags in
-ALL 4 HTML files. Hashes already computed from the exact pinned URLs (do NOT recompute):
+### ✅ P3a — SRI hashes — DONE & VERIFIED (commit 145cbe6, pushed)
+`integrity` + `crossorigin="anonymous"` added to the 3 classic CDN `<script>` tags in
+all 4 HTML files; three.js covered via `<link rel="modulepreload" integrity>` in
+index.html `<head>`. Verified in browser: all libs load, 0 console errors, P1 still
+passes. Hashes used (recorded for reference / re-verification):
 
 - gsap 3.12.5 → `sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt`
 - ScrollTrigger 3.12.5 → `sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d`
@@ -52,15 +54,21 @@ three.js is an ESM `import` in `index.html` — SRI cannot go on a bare import. 
 integrity="sha384-iuC3I0bVuCDzGoJi9KmCkGzEwo7vYFG/gBa7C/1D7mp8ZTt1CgTJ8C57dTDqqpfM"
 crossorigin="anonymous">` to `index.html` `<head>`.
 
-### ⏳ P3b — Tailwind CDN → static CSS — NOT STARTED
-Replace `<script src="https://cdn.tailwindcss.com"></script>` + the inline
-`tailwind.config = {...}` block (all 4 HTML files) with `<link rel="stylesheet"
-href="css/tailwind.css">`. Build with Tailwind **v3** (`npx tailwindcss@3`); config
-`theme.extend` must port the exact palette (`ink` 950-700, `mint` 300-700) and
-`fontFamily` (Inter / JetBrains Mono) from the inline config; `content` globs = the 4
-HTML + `js/**`. Then verify visual parity vs CDN version (screenshots, key pages,
-mobile). Watch arbitrary-value classes (`text-[clamp(...)]`, `border-mint-500/30`,
-`text-white/65`).
+### ✅ P3b — Tailwind CDN → static CSS — DONE & VERIFIED
+`cdn.tailwindcss.com` + inline `tailwind.config` removed from all 4 HTML files,
+replaced with `<link rel="stylesheet" href="css/tailwind.css">`. Static CSS built
+with Tailwind v3; build source kept in repo: `tailwind.config.js` (ports the exact
+ink/mint palette + Inter/JetBrains fonts; `content` = `./*.html`, `./js/**/*.js`)
+and `tailwind.input.css`. Output `css/tailwind.css` ≈ 8.9 KB (was ~100 KB+ JS
+runtime). **Rebuild after changing utility classes:**
+```
+npx tailwindcss@3 -i ./tailwind.input.css -o ./css/tailwind.css --minify
+```
+Verified in browser (Playwright): index/about/contact desktop+mobile visual parity,
+Inter/JetBrains fonts, mint-500 = rgb(20,232,156), arbitrary values + md: responsive
+work, no horizontal overflow, P1 still 0/21, **0 console errors AND 0 warnings**
+(the Tailwind production warning is gone). GitHub Pages serves the committed
+`css/tailwind.css` — no CI/build pipeline required.
 
 ### ⏳ P2 — Privacy Policy + Terms text — NOT STARTED
 Footer "Privacy Policy" / "Terms of Service" link to `href="#"` on all 4 pages (dead).
