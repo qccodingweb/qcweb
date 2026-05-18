@@ -120,20 +120,31 @@
   }
 
   // ═══ SCROLL REVEALS ═══
+  function revealDelay(el) {
+    if (el.classList.contains('reveal-delay-4')) return 0.4;
+    if (el.classList.contains('reveal-delay-3')) return 0.3;
+    if (el.classList.contains('reveal-delay-2')) return 0.2;
+    if (el.classList.contains('reveal-delay-1')) return 0.1;
+    return 0;
+  }
   function initScrollReveal() {
     if (REDUCED) {
       gsap.set('.reveal, .reveal-left', { opacity: 1, y: 0, x: 0 });
       return;
     }
-    ScrollTrigger.batch('.reveal', {
-      onEnter: function (batch) {
-        gsap.fromTo(batch,
-          { opacity: 0, y: 60 },
-          { opacity: 1, y: 0, duration: 1, stagger: 0.1, ease: 'power3.out', overwrite: true }
-        );
-      },
-      start: 'top 88%',
-      once: true,
+    // Per-element ScrollTrigger instead of ScrollTrigger.batch: batch relies
+    // on IntersectionObserver and permanently skips elements on fast scroll /
+    // anchor jumps (with once:true there is no retry). The per-element trigger
+    // is evaluated by scroll position on every update, so jumps still fire it.
+    gsap.utils.toArray('.reveal').forEach(function (el) {
+      gsap.fromTo(el,
+        { opacity: 0, y: 60 },
+        {
+          opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+          delay: revealDelay(el),
+          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+        }
+      );
     });
     gsap.utils.toArray('.reveal-left').forEach(function (el) {
       gsap.fromTo(el,
@@ -171,5 +182,16 @@
     initScrollReveal();
     initCardEffects();
     initMeshParallax();
+  });
+
+  // Tailwind (CDN) and web fonts mutate layout AFTER ScrollTrigger has cached
+  // its trigger positions, leaving them stale — on a fresh load at an #anchor
+  // the page sits still and reveals never fire. Recompute once layout settles.
+  window.addEventListener('load', function () {
+    if (typeof ScrollTrigger === 'undefined') return;
+    ScrollTrigger.refresh();
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(function () { ScrollTrigger.refresh(); });
+    }
   });
 })();
