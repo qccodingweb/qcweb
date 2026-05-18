@@ -45,6 +45,29 @@ section.page-section {
 .section-header h2 { margin-bottom: 1rem; }
 .section-header p { font-size: 1.05rem; line-height: 1.8; }
 
+/* ============ LEGAL PAGES ============ */
+.legal { max-width: 840px; }
+.legal-updated {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--mint-500, #14e89c);
+  margin-bottom: 3.5rem;
+}
+.legal-block { margin-bottom: 2.75rem; }
+.legal-block h2 {
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  font-weight: 600;
+  margin-bottom: 0.9rem;
+}
+.legal-block p {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.62);
+}
+.legal-block p + p { margin-top: 0.85rem; }
+
 /* ============ MARQUEE STRIP ============ */
 .marquee {
   overflow: hidden;

@@ -70,13 +70,21 @@ work, no horizontal overflow, P1 still 0/21, **0 console errors AND 0 warnings**
 (the Tailwind production warning is gone). GitHub Pages serves the committed
 `css/tailwind.css` — no CI/build pipeline required.
 
-### ⏳ P2 — Privacy Policy + Terms text — NOT STARTED
-Footer "Privacy Policy" / "Terms of Service" link to `href="#"` on all 4 pages (dead).
-User wants DRAFT text delivered in chat first (UAE/Dubai context: Quadra Code FZCO,
-IFZA Dubai Silicon Oasis, License 65349, TRN 105088941700001; reference UAE PDPL —
-Federal Decree-Law No. 45 of 2021; must carry a "review by UAE-qualified lawyer"
-disclaimer). Build `privacy.html` / `terms.html` and fix the footer links ONLY after
-the user approves the text.
+### ✅ P2 — Privacy Policy + Terms pages — DONE & VERIFIED
+Created `privacy.html` (12 sections) and `terms.html` (11 sections) in the site's
+design (mirrors contact.html: page-hero + page-section + `.reveal` blocks, SRI
+scripts, static tailwind.css). Added a minimal `.legal` block to `css/pages.css`.
+Final wording (no placeholders), UAE/Dubai context: Quadra Code FZCO, IFZA, Licence
+65349, TRN 105088941700001, UAE PDPL Federal Decree-Law No. 45 of 2021, Dubai
+jurisdiction, "last updated 18 May 2026". Contact email left as the current Gmail
+(user will swap to a domain address later). Full EN + SK via the existing i18n
+system (`data-i18n` keys added to both `en` and `sk` blocks in `js/i18n.js`; ~29
+privacy + ~27 terms keys per language; `node -c` syntax-checked). Dead footer
+`href="#"` replaced with `privacy.html` / `terms.html` on all 4 original pages.
+Verified (Playwright): both pages 0 console errors/warnings, EN↔SK toggle swaps
+title+meta+content, reveal robust (0/12 and 0/11 on instant jump-to-bottom), no
+horizontal overflow, footer link click from index → `privacy.html?lang=en`.
+NOTE: text is a solid draft — user intends to have it reviewed by UAE counsel.
 
 ### Decided / parked
 - Gmail contact (`invoicingquadracode@gmail.com`, also formsubmit recipient): user
@@ -84,5 +92,6 @@ the user approves the text.
 - Dead JS in `js/index.js` (~lines 144-223: dashboard/sparkline targeting elements
   that don't exist in current `index.html`): harmless, leftover. Not in scope.
 
-## Next step
-Apply P3a (hashes above), then P3b, then deliver P2 draft text in chat for approval.
+## Status: P1, P3a, P3b, P2 all DONE & verified.
+Open items only: swap Gmail → domain email when ready; legal text to be
+reviewed by UAE counsel; optional SK localization is already in place.
