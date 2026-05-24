@@ -389,13 +389,22 @@ section.page-section {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.tier-features { display: flex; flex-direction: column; gap: 0.75rem; }
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 .tier-features li {
   font-size: 0.88rem;
   color: rgba(255,255,255,0.75);
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .tier-features li::before {
   content: '\2713';
