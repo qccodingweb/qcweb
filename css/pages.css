@@ -308,6 +308,16 @@ section.page-section {
 }
 .service-block:last-child { border-bottom: none; }
 .service-meta { display: flex; flex-direction: column; gap: 1.5rem; }
+
+/* QC Engine: 3 pricing tiers don't fit in the half-column of .service-block.
+   Stack meta header above the tier grid so the grid uses the full width. */
+#engine .service-block {
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+#engine .service-meta {
+  max-width: 65ch;
+}
 .service-subtitle {
   font-size: 1.1rem;
   font-weight: 700;
@@ -404,7 +414,7 @@ section.page-section {
   align-items: flex-start;
   gap: 0.6rem;
   min-width: 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 .tier-features li::before {
   content: '\2713';
