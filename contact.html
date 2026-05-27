@@ -72,11 +72,15 @@
 <section class="page-section">
   <div class="container">
     <div class="contact-grid">
+      <div id="thank-you-banner" style="display:none; text-align:center; padding:3.5rem 2rem; border:1px solid var(--mint-500); border-radius:20px; background:rgba(20,232,156,0.04);">
+        <div style="font-size:3.5rem; color:var(--mint-500); line-height:1; margin-bottom:1.25rem; font-weight:300;">✓</div>
+        <h3 style="font-size:1.5rem; font-weight:800; margin:0; letter-spacing:-0.01em;" data-i18n="contact.thanks">Thank you, we'll be in touch.</h3>
+      </div>
       <form class="reveal" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="f3936f11-9bb5-46b6-aa3d-61a28d6d5303">
         <input type="hidden" name="subject" value="Nová žiadosť o kontakt - Quadra Code">
         <input type="hidden" name="from_name" value="Quadra Code Website">
-        <input type="hidden" name="redirect" value="https://quadra-code.com/contact.html">
+        <input type="hidden" name="redirect" value="https://quadra-code.com/contact.html?sent=1">
         <input type="text" name="botcheck" style="display:none">
         <div class="form-group">
           <label data-i18n="contact.form.name">Your Name</label>
@@ -143,5 +147,19 @@
 <script src="js/i18n.js"></script>
 <script src="js/shared.js"></script>
 <script src="js/pages.js"></script>
+<script>
+  // Show thank-you banner when the form redirected back with ?sent=1
+  if (new URLSearchParams(location.search).get('sent') === '1') {
+    var banner = document.getElementById('thank-you-banner');
+    var form = document.querySelector('form');
+    if (banner && form) {
+      form.style.display = 'none';
+      banner.style.display = 'block';
+      banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Clean the URL so a refresh shows the form again (ready for next submission)
+      history.replaceState({}, '', location.pathname);
+    }
+  }
+</script>
 </body>
 </html>
