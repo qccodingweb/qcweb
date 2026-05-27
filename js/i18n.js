@@ -292,7 +292,7 @@ var translations = {
     "privacy.intro": "How Quadra Code FZCO collects, uses, and protects personal data when you use this website.",
     "privacy.updated": "Last updated: 18 May 2026",
     "privacy.s1.h": "1. Who we are",
-    "privacy.s1.p": "This website is operated by Quadra Code FZCO (\"Quadra Code\", \"we\", \"us\"), a free zone company registered at IFZA Business Park, Dubai Silicon Oasis, Dubai, United Arab Emirates. Licence No. 65349. TRN 105088941700001. For any privacy matter you can contact us at invoicingquadracode@gmail.com or on +971 50 783 8478.",
+    "privacy.s1.p": "This website is operated by Quadra Code FZCO (\"Quadra Code\", \"we\", \"us\"), a free zone company registered at IFZA Business Park, Dubai Silicon Oasis, Dubai, United Arab Emirates. Licence No. 65349. TRN 105088941700001. For any privacy matter you can contact us at info@quadra-code.com or on +971 50 783 8478.",
     "privacy.s2.h": "2. Scope",
     "privacy.s2.p": "This policy explains how we handle personal data collected through this website. It does not cover separate contractual engagements, which are governed by the individual agreement signed with each client.",
     "privacy.s3.h": "3. What personal data we collect",
@@ -300,7 +300,7 @@ var translations = {
     "privacy.s4.h": "4. How and why we use your data",
     "privacy.s4.p": "We use the data you submit to respond to your enquiry and to communicate with you about your request, and we process technical data to keep the website secure and functioning. We process personal data in accordance with UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data and its implementing regulations, on the basis of taking steps at your request and our legitimate interest in responding to prospective clients.",
     "privacy.s5.h": "5. Third parties and processors",
-    "privacy.s5.p": "Contact form submissions are transmitted and delivered to us through the third-party service FormSubmit (formsubmit.co), which processes the submitted data solely to deliver it to us by email, where it is received in our business inbox. The site also loads fonts and libraries from third-party networks (Google Fonts, cdnjs, jsDelivr, unpkg), which may receive your IP address as a technical necessity to serve those resources. We do not sell your personal data and we do not share it for marketing.",
+    "privacy.s5.p": "Contact form submissions are transmitted and delivered to us through the third-party service Web3Forms (web3forms.com), which processes the submitted data solely to deliver it to us by email, where it is received in our business inbox. The site also loads fonts and libraries from third-party networks (Google Fonts, cdnjs, jsDelivr, unpkg), which may receive your IP address as a technical necessity to serve those resources. We do not sell your personal data and we do not share it for marketing.",
     "privacy.s6.h": "6. International transfers",
     "privacy.s6.p": "Some of the third-party services above may process data on servers located outside the United Arab Emirates. Where personal data is transferred outside the UAE, we take reasonable steps so that it is handled consistently with the UAE Personal Data Protection Law.",
     "privacy.s7.h": "7. Retention",
@@ -314,7 +314,7 @@ var translations = {
     "privacy.s11.h": "11. Changes to this policy",
     "privacy.s11.p": "We may update this policy from time to time. The \"last updated\" date above reflects the latest version.",
     "privacy.s12.h": "12. Contact",
-    "privacy.s12.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE. Email: invoicingquadracode@gmail.com. Phone: +971 50 783 8478.",
+    "privacy.s12.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE. Email: info@quadra-code.com. Phone: +971 50 783 8478.",
 
     "terms.label": "Legal",
     "terms.h1.1": "Terms of",
@@ -342,7 +342,7 @@ var translations = {
     "terms.s10.h": "10. Changes",
     "terms.s10.p": "We may update these Terms at any time. Continued use of the site after changes are published constitutes acceptance of the updated Terms.",
     "terms.s11.h": "11. Contact",
-    "terms.s11.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE. Email: invoicingquadracode@gmail.com. Phone: +971 50 783 8478.",
+    "terms.s11.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubai, UAE. Email: info@quadra-code.com. Phone: +971 50 783 8478.",
   },
 
   sk: {
@@ -638,7 +638,7 @@ var translations = {
     "privacy.intro": "Ako Quadra Code FZCO zhromažďuje, používa a chráni osobné údaje pri používaní tejto webovej stránky.",
     "privacy.updated": "Naposledy aktualizované: 18. mája 2026",
     "privacy.s1.h": "1. Kto sme",
-    "privacy.s1.p": "Túto webovú stránku prevádzkuje Quadra Code FZCO („Quadra Code\", „my\", „nás\"), spoločnosť v slobodnej zóne registrovaná na adrese IFZA Business Park, Dubai Silicon Oasis, Dubaj, Spojené arabské emiráty. Licencia č. 65349. TRN 105088941700001. V akejkoľvek záležitosti týkajúcej sa súkromia nás môžete kontaktovať na invoicingquadracode@gmail.com alebo na čísle +971 50 783 8478.",
+    "privacy.s1.p": "Túto webovú stránku prevádzkuje Quadra Code FZCO („Quadra Code\", „my\", „nás\"), spoločnosť v slobodnej zóne registrovaná na adrese IFZA Business Park, Dubai Silicon Oasis, Dubaj, Spojené arabské emiráty. Licencia č. 65349. TRN 105088941700001. V akejkoľvek záležitosti týkajúcej sa súkromia nás môžete kontaktovať na info@quadra-code.com alebo na čísle +971 50 783 8478.",
     "privacy.s2.h": "2. Rozsah",
     "privacy.s2.p": "Tieto zásady vysvetľujú, ako spracúvame osobné údaje zhromaždené prostredníctvom tejto webovej stránky. Nevzťahujú sa na samostatné zmluvné spolupráce, ktoré sa riadia individuálnou zmluvou podpísanou s každým klientom.",
     "privacy.s3.h": "3. Aké osobné údaje zhromažďujeme",
@@ -646,7 +646,7 @@ var translations = {
     "privacy.s4.h": "4. Ako a prečo údaje používame",
     "privacy.s4.p": "Odoslané údaje používame na to, aby sme odpovedali na váš dopyt a komunikovali s vami o vašej požiadavke, a technické údaje spracúvame na zabezpečenie a fungovanie stránky. Osobné údaje spracúvame v súlade so zákonom SAE – federálnym dekrétom-zákonom č. 45 z roku 2021 o ochrane osobných údajov a jeho vykonávacími predpismi, na základe krokov uskutočnených na vašu žiadosť a nášho oprávneného záujmu odpovedať potenciálnym klientom.",
     "privacy.s5.h": "5. Tretie strany a sprostredkovatelia",
-    "privacy.s5.p": "Odoslané kontaktné formuláre sa prenášajú a doručujú nám prostredníctvom služby tretej strany FormSubmit (formsubmit.co), ktorá spracúva odoslané údaje výlučne na ich doručenie nám e-mailom do našej firemnej schránky. Stránka tiež načítava písma a knižnice zo sietí tretích strán (Google Fonts, cdnjs, jsDelivr, unpkg), ktoré môžu prijať vašu IP adresu ako technickú nevyhnutnosť na doručenie týchto zdrojov. Vaše osobné údaje nepredávame a nezdieľame ich na marketingové účely.",
+    "privacy.s5.p": "Odoslané kontaktné formuláre sa prenášajú a doručujú nám prostredníctvom služby tretej strany Web3Forms (web3forms.com), ktorá spracúva odoslané údaje výlučne na ich doručenie nám e-mailom do našej firemnej schránky. Stránka tiež načítava písma a knižnice zo sietí tretích strán (Google Fonts, cdnjs, jsDelivr, unpkg), ktoré môžu prijať vašu IP adresu ako technickú nevyhnutnosť na doručenie týchto zdrojov. Vaše osobné údaje nepredávame a nezdieľame ich na marketingové účely.",
     "privacy.s6.h": "6. Medzinárodné prenosy",
     "privacy.s6.p": "Niektoré z vyššie uvedených služieb tretích strán môžu spracúvať údaje na serveroch mimo Spojených arabských emirátov. Ak sa osobné údaje prenášajú mimo SAE, prijímame primerané opatrenia, aby sa s nimi zaobchádzalo v súlade so zákonom SAE o ochrane osobných údajov.",
     "privacy.s7.h": "7. Doba uchovávania",
@@ -660,7 +660,7 @@ var translations = {
     "privacy.s11.h": "11. Zmeny týchto zásad",
     "privacy.s11.p": "Tieto zásady môžeme priebežne aktualizovať. Dátum „naposledy aktualizované“ vyššie odráža najnovšiu verziu.",
     "privacy.s12.h": "12. Kontakt",
-    "privacy.s12.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubaj, SAE. E-mail: invoicingquadracode@gmail.com. Telefón: +971 50 783 8478.",
+    "privacy.s12.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubaj, SAE. E-mail: info@quadra-code.com. Telefón: +971 50 783 8478.",
 
     "terms.label": "Právne informácie",
     "terms.h1.1": "Obchodné",
@@ -688,7 +688,7 @@ var translations = {
     "terms.s10.h": "10. Zmeny",
     "terms.s10.p": "Tieto podmienky môžeme kedykoľvek aktualizovať. Pokračovanie v používaní stránky po zverejnení zmien predstavuje súhlas s aktualizovanými podmienkami.",
     "terms.s11.h": "11. Kontakt",
-    "terms.s11.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubaj, SAE. E-mail: invoicingquadracode@gmail.com. Telefón: +971 50 783 8478.",
+    "terms.s11.p": "Quadra Code FZCO — IFZA Business Park, Dubai Silicon Oasis, Dubaj, SAE. E-mail: info@quadra-code.com. Telefón: +971 50 783 8478.",
   }
 };
 
