@@ -40,16 +40,19 @@ function initIntro() {
     { opacity: 0, y: 20 },
     { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.1 }
   );
-  gsap.to('.hero-headline .char', {
-    y: '0%',
-    duration: 1.1,
-    stagger: 0.018,
-    ease: 'power4.out',
-    delay: 0.3,
+  gsap.to('.brand-title .bt-char', {
+    opacity: 1, y: 0, filter: 'blur(0px)',
+    duration: 1.0, stagger: 0.05, ease: 'power3.out', delay: 0.35
+  });
+  gsap.to('.brand-accent', {
+    scaleX: 1, duration: 1.1, ease: 'power3.inOut', delay: 1.05
+  });
+  gsap.to('.hero-sub', {
+    opacity: 1, y: 0, duration: 0.9, ease: 'power3.out', delay: 1.2
   });
   gsap.to('#hero-bottom', {
     opacity: 1, y: 0,
-    duration: 1, delay: 1.5, ease: 'power3.out'
+    duration: 1, delay: 1.75, ease: 'power3.out'
   });
 }
 
