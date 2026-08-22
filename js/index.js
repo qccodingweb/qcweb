@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ========== PRODUCTS HORIZONTAL SCROLL ========== */
   var track = document.getElementById('products-track');
   if (track) {
-    var panelCount = 3;
+    var panelCount = 4;
     ScrollTrigger.create({
       trigger: '.products-pin',
       start: 'top top',
