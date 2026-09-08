@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="meta.thanks.title">Thank you · Quadra Code</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Your QC Insight payment was received. Here is what happens next." data-i18n="meta.thanks.desc">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Thank you · Quadra Code">
+<meta property="og:description" content="Your QC Insight payment was received. Here is what happens next.">
+<meta property="og:image" content="https://quadra-code.com/og-image.png">
+<meta property="og:url" content="https://quadra-code.com/thank-you.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tailwind.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor"></div>
+<div class="cursor-dot"></div>
+
+<!-- Background -->
+<div class="gradient-mesh" id="gradient-mesh"></div>
+<div class="noise"></div>
+<div class="mobile-overlay"></div>
+
+<!-- Nav -->
+<nav class="fixed-nav" id="nav">
+  <a href="index.html" class="nav-logo magnetic" data-cursor="hover">QUADRA <span class="text-mint-500">CODE</span></a>
+  <div class="nav-links-desktop hidden md:flex items-center gap-8">
+    <a href="index.html" data-i18n="nav.home">Home</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="services.html" data-i18n="nav.services">Services</a>
+    <a href="contact.html" data-i18n="nav.contact">Contact</a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-toggle magnetic" data-cursor="hover">EN</button>
+    <a href="contact.html" class="cta-button magnetic nav-cta-desktop" data-cursor="hover" style="padding: 10px 20px; font-size: 11px;">
+      <span data-i18n="nav.contact">Contact</span><span>→</span>
+    </a>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">QUADRA CODE<span class="dot">.</span></div>
+    <div class="preloader-bar"><div class="preloader-progress"></div></div>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <canvas class="page-hero-canvas" aria-hidden="true"></canvas>
+  <div class="page-hero-content">
+    <span class="label-mint" data-i18n="thanks.label">Payment received</span>
+    <h1><span data-i18n="thanks.h1.1">Thank you.</span><br><span class="text-mint-500" data-i18n="thanks.h1.2">We start now.</span></h1>
+    <p data-i18n="thanks.intro">Your payment for QC Insight was received. Stripe has emailed you a receipt.</p>
+  </div>
+</section>
+
+<!-- Legal body -->
+<section class="page-section">
+  <div class="container legal">
+        <div class="legal-block reveal">
+      <h2 data-i18n="thanks.s1.h">1. Kickoff email within one business day</h2>
+      <p data-i18n="thanks.s1.p">We write to the email address you used at checkout. The email contains a short list of inputs we need from you: access, documents and two interview slots.</p>
+    </div>
+    <div class="legal-block reveal">
+      <h2 data-i18n="thanks.s2.h">2. Blueprint within 5 business days</h2>
+      <p data-i18n="thanks.s2.p">Kickoff is the business day after we have both the payment and your inputs. From that day we deliver the written implementation blueprint within 5 business days, with a binding price for the next step.</p>
+    </div>
+    <div class="legal-block reveal">
+      <h2 data-i18n="thanks.s3.h">3. Questions or a change of plan</h2>
+      <p data-i18n="thanks.s3.p">Write to info@quadra-code.com or call +971 50 783 8478. You can cancel free of charge any time before kickoff; the conditions are in our Payment &amp; Delivery Terms.</p>
+    </div>
+    <div class="legal-block reveal">
+      <a href="index.html" class="cta-button magnetic" data-cursor="hover"><span data-i18n="thanks.cta">Back to homepage</span><span>&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span data-i18n="footer.copy">© 2026 Quadra Code FZCO. All rights reserved.</span>
+    <div class="flex items-center gap-6">
+      <a href="privacy.html" class="footer-link" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="terms.html" class="footer-link" data-i18n="footer.terms">Terms of Service</a>
+      <a href="payment-terms.html" class="footer-link" data-i18n="footer.payment">Payment &amp; Delivery Terms</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" integrity="sha384-B2WBjDzEjJpYvhmi2UyEn7rektqkf5suS6sNoyyrf0EBAwBHdkiXxIlU0V5Ru2ed" crossorigin="anonymous"></script>
+<script src="js/i18n.js"></script>
+<script src="js/shared.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>

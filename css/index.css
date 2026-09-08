@@ -393,10 +393,10 @@
 }
 .gate-facts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 32px;
   margin-top: 44px;
-  max-width: 620px;
+  max-width: 820px;
 }
 .gate-fact-value {
   font-family: var(--font-mono);
